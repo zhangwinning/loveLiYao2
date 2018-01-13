@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>给李大瑶同学的第二封信</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<audio autoplay="autopaly">
+		<source src="周杰伦 - 告白气球.mp3" type="audio/mp3" />
+	
+	</audio>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">大瑶瑶</span><br />
+				<span class="space"/><span class="comments">2018年01月13日晚，上海，气温较低，我躺在床上，想起了你。
+				</span><br /><br>
+				<span class="space"/><span class="comments">想起了今天经历的点点滴滴，发现有好多第一次，窃喜
+。</span><br />
+				<span class="space"/><span class="comments">今天第一次我去学校找你。</span><br />
+				<span class="space"/>今天第一次你陪我逛校园。<br />
+				<span class="space"/>今天第一次我给你夹鸡肉。<br />
+				<span class="space"/>今天第一次你给我夹鱼肉。<br />
+				<span class="space"/>今天第一次手拉手逛超市。<br />
+				<span class="space"/>今天第一次你送我去车站。<br /> <br>
+				<span class="space"/>遇到你之后<br />
+				<span class="space"/>我才知道什么叫缘分。<br />
+				<span class="space"/>我才知道什么叫一见钟情。<br />
+				<span class="space"/>我才知道爱上一个人原来就是几次笑容的事情。<br />
+				<!-- <span class="space"/>还能满载着一生的幸福快乐。<br />
+				<span class="keyword">我愿意爱你直到老去，<br />
+				<span class="space"/>我会为我们的未来撑起一片天空，<br />
+				<span class="space"/>为我们的将来担负起一生的责任，<br />
+				<span class="space"/>愿意为你去做每一件能让你开心快乐的事。<br />
+				<span class="space"/>所有我们经历的点点滴滴，<br />都是我们一辈子最美的回忆。</span> <br /> -->
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						@大瑶瑶,我爱你！
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- 文宁</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+	    var together = new Date();
+		    together.setFullYear(2017,11,23); 			//时间年月日
+		    together.setHours(0);						//小时	
+		    together.setMinutes(0);					//分钟
+		    together.setSeconds(0);					//秒前一位
+		    together.setMilliseconds(2);				//秒第二位
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
